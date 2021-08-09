@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %} QR Code Generator {% endblock %} {% block main %}
+
+<div class="row">
+  <div class="col-sm-6 px-4 mx-auto">
+    <h3 class="text-center pb-3 mb-3 border-bottom">QR Code Generator</h3>
+    <form method="post" action="{{ url_for('index') }}">
+      <div class="input-group">
+        <input type="text" class="form-control" id="url" name="url" value="{{ url }}" placeholder="Enter URL...." />
+        <button class="btn btn-outline-secondary" type="submit">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 pt-4 px-4 mx-auto">
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='img/' + img_name + '.png') }}" alt="QR Code" class="img-thumbnail" style="width: 200px" />
+    </div>
+  </div>
+  <div class="text-center">
+    <form method="get" action="{{ url_for('download', img_name=img_name) }}">
+      <button class="btn btn-outline-secondary mt-4 text-center" type="submit" style="width: 200px">
+        <i class="bi bi-download me-2"></i>
+        Download
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
