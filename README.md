@@ -1,6 +1,6 @@
 # QR-Code-Gen
 
-QR Code Generator Website Using Python and [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+QR Code Generator WebApp Using Python and [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
 ## Preview App
 
