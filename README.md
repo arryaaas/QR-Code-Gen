@@ -4,7 +4,7 @@ QR Code Generator WebApp Using Python and [Flask](https://flask.palletsprojects.
 
 ## Preview App
 
-![](design/design.PNG)
+![](design/design.png)
 
 ## Usage
 
